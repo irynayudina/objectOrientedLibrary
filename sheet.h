@@ -1,16 +1,27 @@
 #pragma once
+#include "ceil.h"
+
 #include <fstream>
-#include "book.h"
 class sheet :
-	public book
+	public ceil
 {
 private:
-	string name;
+	char* name;
 	bool protection;
-	//2d array or list of ceils by rows and columns 
+	ceil ceils[100][100];
 public:
 
-	sheet() {}
+	sheet() 
+	{
+		name = new char[6];
+		name[0] = 's';
+		name[1] = 'h';
+		name[2] = 'e';
+		name[3] = 'e';
+		name[4] = 't';
+		name[5] = '1';
+		protection = false;
+	}
 	sheet(/**/) {}
 	sheet(/*all the properties = all the properties; copy*/) {}
 	~sheet() {}
