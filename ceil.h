@@ -97,7 +97,15 @@ public:
 	bool get_protection() { return this->protection; }
 	void set_protection(bool value) { this->protection = value; }
 	char* get_content() { return this->content; }
-	void set_content(char* value) { this->content = value; }
+	void set_content(int size, char* value) {
+		if (this->content != NULL) {
+			delete[] this->content;
+		}
+		this->content = new char[size];
+		for (int i = 0; i < size; i++) {
+			this->content[i] = value[i];
+		}
+	}
 	int get_name_length() { return this->name_length; }
 	void set_name_length(int value) { this->name_length = value; }
 	int get_content_length() { return this->content_length; }
@@ -131,7 +139,7 @@ istream& operator>> (istream& out, CEIL& point)
 	out >> nl;
 	point.set_name_length(nl);
 	n = new char[nl];
-	for (int i = 0; i < point.set_name_length; i++)
+	for (int i = 0; i < nl; i++)
 	{
 		out >> n[i];
 	}
@@ -139,7 +147,7 @@ istream& operator>> (istream& out, CEIL& point)
 	out >> cl;
 	point.set_content_length(cl);
 	c = new char[cl];
-	for (int i = 0; i < point.set_content_length; i++)
+	for (int i = 0; i < cl; i++)
 	{
 		out >> c[i];
 	}
