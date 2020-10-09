@@ -156,7 +156,6 @@
     <ClInclude Include="book.h" />
     <ClInclude Include="ceil.h" />
     <ClInclude Include="sheet.h" />
-    <ClInclude Include="streamOverload.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,6 +1,8 @@
 ﻿#include <iostream>
+#include "ceil.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    CEIL c();
+    std::cout << "Hello World!\n" << c;
 }

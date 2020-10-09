@@ -38,8 +38,5 @@
     <ClInclude Include="ceil.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="streamOverload.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
