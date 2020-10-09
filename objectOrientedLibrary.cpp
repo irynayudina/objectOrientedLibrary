@@ -4,5 +4,5 @@
 int main()
 {
     CEIL c();
-    std::cout << "Hello World!\n" << c;
+    std::cout << "Hello World!\n";
 }

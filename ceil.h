@@ -82,8 +82,8 @@ public:
 	}
 	friend ostream& operator<< (ostream& out, const CEIL& point);
 	friend istream& operator>> (istream& out, const CEIL& point);
-	void save_to_the_disk() {}
-	void get_from_the_disk() {}
+	/*void save_to_the_disk() {}
+	void get_from_the_disk() {}*/
 	char* get_name() { return this->name; }
 	void set_name(int size, char* value) {
 		if (this->name != NULL) {
@@ -110,11 +110,11 @@ public:
 	void set_name_length(int value) { this->name_length = value; }
 	int get_content_length() { return this->content_length; }
 	void set_content_length(int value) { this->content_length = value; }
-	void open(){}
+	/*void open(){}
 	void close(){}
 	void chaange_name(){}
 	void put_value(){}
-	void get_value() {}
+	void get_value() {}*/
 
 };
 ostream& operator<< (ostream& out, const CEIL& point) 
